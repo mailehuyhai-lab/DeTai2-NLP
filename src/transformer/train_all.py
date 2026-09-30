@@ -11,7 +11,6 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 LOG_FILE = BASE_DIR / "results" / "transformer" / "train_log.txt"
-LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 
 def run_task(task: str):
@@ -38,6 +37,17 @@ def run_task(task: str):
         log.flush()
 
 
-if __name__ == "__main__":
+def main():
+    if any(arg in ("-h", "--help") for arg in sys.argv[1:]):
+        print("Usage: python src/transformer/train_all.py")
+        print("Runs train_task.py --task sentiment and --task topic sequentially,")
+        print(f"logging to {LOG_FILE.relative_to(BASE_DIR)}.")
+        print("For per-task options, run: python src/transformer/train_task.py --help")
+        return
+    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
     for task in ("sentiment", "topic"):
         run_task(task)
+
+
+if __name__ == "__main__":
+    main()

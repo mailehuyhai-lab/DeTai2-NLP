@@ -70,9 +70,10 @@ Raw UIT-VSFC
 → EDA
 → PhoBERT Transformer
 → Evaluation
+→ Streamlit Dashboard (analytical views + prediction demo)
 ```
 
-Không bao gồm các thành phần chưa triển khai như dashboard, API, ontology-rule fusion, KG hay RAG.
+Dashboard Streamlit đã được triển khai tại `src/dashboard/` với các trang phân tích (phân bố nhãn, sentiment × topic, từ khóa/emoji, độ dài, so sánh mô hình, phân tích lỗi) và tab **Demo dự đoán** cho inference. Các thành phần chưa triển khai còn lại: ontology, KG, RAG và ontology-rule fusion.
 
 ## 5. Repository structure
 
@@ -100,6 +101,7 @@ src/
   baseline/
   eda/
   transformer/
+  dashboard/
 
 models/
   baseline/
@@ -251,6 +253,21 @@ python src/transformer/evaluate.py
 python src/transformer/validate.py
 ```
 
+### Dashboard
+
+```bash
+python -m streamlit run src/dashboard/app.py
+```
+
+#### Prediction Demo và checkpoint local
+
+- Các trang **dashboard analytical** đọc `data/processed/` và các artifacts trong `results/` đã được commit vào repository.
+- Tab **Demo dự đoán** cần hai checkpoint PhoBERT local tại:
+  - `models/transformer/sentiment/`
+  - `models/transformer/topic/`
+- `models/` bị Git ignore vì checkpoint có kích thước lớn, nên clone mới sẽ không có các checkpoint local này.
+- Để dùng Prediction Demo trên clone mới, cần chuẩn bị hoặc tải checkpoint tương ứng trước. Repository hiện **không có cơ chế tự động tải checkpoint** cho tab này.
+
 Thứ tự pipeline khuyến nghị:
 
 1. `src.preprocessing.build_processed`
@@ -337,8 +354,6 @@ Các giới hạn hiện tại:
 
 Các hướng mở rộng trong tương lai:
 
-- Dashboard
-- API/Web demo
 - Emotion/Service Feedback Ontology
 - Rule-based/Ontology fusion
 - Explainability
