@@ -1,0 +1,142 @@
+{
+  "train": {
+    "n_samples": 11424,
+    "n_with_emoji": 84,
+    "pct_with_emoji": 0.7353,
+    "top_emojis": [
+      {
+        "emoji": "🙂",
+        "count": 27
+      },
+      {
+        "emoji": "😄",
+        "count": 12
+      },
+      {
+        "emoji": "😞",
+        "count": 11
+      },
+      {
+        "emoji": "😏",
+        "count": 9
+      },
+      {
+        "emoji": "❤",
+        "count": 7
+      },
+      {
+        "emoji": "😆",
+        "count": 5
+      },
+      {
+        "emoji": "😋",
+        "count": 4
+      },
+      {
+        "emoji": "😡",
+        "count": 3
+      },
+      {
+        "emoji": "😊",
+        "count": 3
+      },
+      {
+        "emoji": "😢",
+        "count": 2
+      },
+      {
+        "emoji": "😮",
+        "count": 1
+      }
+    ],
+    "n_distinct_emoji": 11
+  },
+  "dev": {
+    "n_samples": 1583,
+    "n_with_emoji": 10,
+    "pct_with_emoji": 0.6317,
+    "top_emojis": [
+      {
+        "emoji": "❤",
+        "count": 2
+      },
+      {
+        "emoji": "😢",
+        "count": 2
+      },
+      {
+        "emoji": "😞",
+        "count": 1
+      },
+      {
+        "emoji": "😊",
+        "count": 1
+      },
+      {
+        "emoji": "🙂",
+        "count": 1
+      },
+      {
+        "emoji": "😆",
+        "count": 1
+      },
+      {
+        "emoji": "😮",
+        "count": 1
+      },
+      {
+        "emoji": "😏",
+        "count": 1
+      }
+    ],
+    "n_distinct_emoji": 8
+  },
+  "test": {
+    "n_samples": 3166,
+    "n_with_emoji": 31,
+    "pct_with_emoji": 0.9792,
+    "top_emojis": [
+      {
+        "emoji": "🙂",
+        "count": 11
+      },
+      {
+        "emoji": "😄",
+        "count": 6
+      },
+      {
+        "emoji": "❤",
+        "count": 4
+      },
+      {
+        "emoji": "😊",
+        "count": 3
+      },
+      {
+        "emoji": "😋",
+        "count": 2
+      },
+      {
+        "emoji": "😏",
+        "count": 1
+      },
+      {
+        "emoji": "😆",
+        "count": 1
+      },
+      {
+        "emoji": "🥰",
+        "count": 1
+      },
+      {
+        "emoji": "😡",
+        "count": 1
+      },
+      {
+        "emoji": "😞",
+        "count": 1
+      }
+    ],
+    "n_distinct_emoji": 10
+  }
+}

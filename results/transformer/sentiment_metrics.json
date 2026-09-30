@@ -1,0 +1,48 @@
+{
+  "task": "sentiment",
+  "model": "vinai/phobert-base-v2",
+  "seed": 42,
+  "max_length": 32,
+  "batch_size": 64,
+  "learning_rate": 2e-05,
+  "epochs_trained": 2,
+  "best_epoch": 2,
+  "best_dev_macro_f1": 0.8456,
+  "dev_metrics": {
+    "accuracy": 0.9362,
+    "macro_precision": 0.8218,
+    "macro_recall": 0.8813,
+    "macro_f1": 0.8456,
+    "weighted_f1": 0.9392
+  },
+  "test_metrics": {
+    "accuracy": 0.9198,
+    "macro_precision": 0.8053,
+    "macro_recall": 0.8463,
+    "macro_f1": 0.8224,
+    "weighted_f1": 0.9226
+  },
+  "class_weights": {
+    "Negative": 0.7153,
+    "Neutral": 8.3144,
+    "Positive": 0.6749
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.665732,
+      "dev_accuracy": 0.9318,
+      "dev_macro_f1": 0.836,
+      "dev_weighted_f1": 0.9322,
+      "time_s": 4460.1
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.35816,
+      "dev_accuracy": 0.9362,
+      "dev_macro_f1": 0.8456,
+      "dev_weighted_f1": 0.9392,
+      "time_s": 3494.6
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+=== DEV (best epoch 2) ===
+                  precision    recall  f1-score   support
+
+        Lecturer     0.9730    0.8775    0.9228      1151
+Training_program     0.6780    0.8202    0.7424       267
+        Facility     0.8481    0.9571    0.8993        70
+          Others     0.4336    0.6526    0.5210        95
+
+        accuracy                         0.8579      1583
+       macro avg     0.7332    0.8269    0.7714      1583
+    weighted avg     0.8854    0.8579    0.8672      1583
+
+
+=== TEST ===
+                  precision    recall  f1-score   support
+
+        Lecturer     0.9632    0.8694    0.9139      2290
+Training_program     0.6756    0.7902    0.7284       572
+        Facility     0.8616    0.9448    0.9013       145
+          Others     0.4170    0.7107    0.5256       159
+
+        accuracy                         0.8506      3166
+       macro avg     0.7294    0.8288    0.7673      3166
+    weighted avg     0.8792    0.8506    0.8603      3166

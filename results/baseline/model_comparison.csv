@@ -1,0 +1,5 @@
+task,model,accuracy,macro_precision,macro_recall,macro_f1,weighted_precision,weighted_recall,weighted_f1
+Sentiment,Logistic Regression,0.8664,0.7087,0.733,0.7174,0.8803,0.8664,0.8717
+Sentiment,Linear SVM,0.892,0.7541,0.7172,0.7304,0.8851,0.892,0.8872
+Topic,Logistic Regression,0.8042,0.6896,0.7798,0.7184,0.8573,0.8042,0.8213
+Topic,Linear SVM,0.8588,0.7489,0.7598,0.7531,0.8633,0.8588,0.8602

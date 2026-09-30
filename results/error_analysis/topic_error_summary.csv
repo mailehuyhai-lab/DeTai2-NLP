@@ -1,0 +1,13 @@
+true_label_name,predicted_label_name,count,pct_of_errors,pct_of_true_class
+Lecturer,Training_program,163,36.47,7.12
+Training_program,Lecturer,101,22.6,17.66
+Others,Training_program,45,10.07,28.3
+Lecturer,Others,44,9.84,1.92
+Others,Lecturer,42,9.4,26.42
+Training_program,Others,28,6.26,4.9
+Lecturer,Facility,7,1.57,0.31
+Facility,Training_program,6,1.34,4.14
+Training_program,Facility,4,0.89,0.7
+Others,Facility,3,0.67,1.89
+Facility,Lecturer,2,0.45,1.38
+Facility,Others,2,0.45,1.38

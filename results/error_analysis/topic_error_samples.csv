@@ -1,0 +1,41 @@
+id,text,true_label,predicted_label
+test_00089,không slide .,Lecturer,Training_program
+test_00321,ít demo .,Lecturer,Training_program
+test_00520,có nhiệt huyết .,Lecturer,Training_program
+test_02591,dạy bài hay .,Lecturer,Training_program
+test_00511,có demo trực tiếp .,Lecturer,Training_program
+test_00099,không thật sự dạy .,Lecturer,Training_program
+test_01908,bài giảng hấp dẫn .,Lecturer,Training_program
+test_00124,ít cho bài tập .,Lecturer,Training_program
+test_02725,chăm chú bài tập .,Lecturer,Training_program
+test_02665,nộp deadline bất chợt .,Lecturer,Training_program
+test_02629,chi tiết .,Training_program,Lecturer
+test_00570,slide chi tiết .,Training_program,Lecturer
+test_01221,trao đổi nhóm .,Training_program,Lecturer
+test_00531,nhiều bài thuyết trình .,Training_program,Lecturer
+test_00964,dạy rất chi tiết .,Training_program,Lecturer
+test_00429,thuyết trình thường xuyên .,Training_program,Lecturer
+test_03023,đến lớp đúng giờ !,Training_program,Lecturer
+test_00499,chưa sâu về nội dung .,Training_program,Lecturer
+test_02216,thông báo nghỉ hơi chậm .,Training_program,Lecturer
+test_02452,các hoạt động chưa vui .,Training_program,Lecturer
+test_00938,cầu kỳ .,Others,Training_program
+test_01588,quá nhiều .,Others,Training_program
+test_02795,trung bình .,Others,Training_program
+test_01287,giáo trình mới .,Others,Training_program
+test_02984,hoạt động nhóm .,Others,Training_program
+test_01360,đồ án hay .,Others,Training_program
+test_01612,giờ là 2014 rồi !,Others,Training_program
+test_02178,tính kỷ luật cao .,Others,Training_program
+test_02431,kiến thức tổng hợp .,Others,Training_program
+test_02864,học để làm gì !,Others,Training_program
+test_02254,hài lòng .,Lecturer,Others
+test_00290,tiếng anh tốt .,Lecturer,Others
+test_01085,sự tận tình .,Lecturer,Others
+test_00455,không điểm danh .,Lecturer,Others
+test_00546,cô rất xinh .,Lecturer,Others
+test_01220,hoàn toàn hài lòng .,Lecturer,Others
+test_02237,cảm thấy bình thường .,Lecturer,Others
+test_01044,dễ hiểu xinh gái .,Lecturer,Others
+test_02265,cám ơn thầy wzjwz296 .,Lecturer,Others
+test_02792,chấm điểm trên khmtdotuitdotedudotvn .,Lecturer,Others

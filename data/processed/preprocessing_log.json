@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-09-29T13:09:35.040602+00:00",
+  "source": "data/raw/",
+  "output": "data/processed/",
+  "decisions": {
+    "Q1_annotation_conflict": "A - Xóa cả 2 dòng",
+    "Q2_emoji_acronym": "A - Chuyển về Emoji Unicode",
+    "Q3_punctuation_spacing": "A - Giữ nguyên pre-tokenized",
+    "Q4_lowercase": "C - Tạo 2 phiên bản (text_clean + text_lower)"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "name": "load_and_merge",
+      "description": "Đọc sents.txt + sentiments.txt + topics.txt, ghép theo index dòng",
+      "samples": {
+        "train": 11426,
+        "dev": 1583,
+        "test": 3166
+      }
+    },
+    {
+      "step": 2,
+      "name": "verify_raw_checksums",
+      "description": "Kiểm tra MD5 checksum 9 file raw — tất cả khớp"
+    },
+    {
+      "step": 3,
+      "name": "remove_annotation_conflict",
+      "description": "Xóa 2 dòng conflict trong train (index 11293, 11417) — Q1=A đã duyệt",
+      "removed": [
+        {
+          "split": "train",
+          "id": "train_11293",
+          "original_index": 11293,
+          "text": "thầy dạy hay , tuy nhiên còn nhiều chỗ chưa thật sự giải đáp hoàn toàn cho sinh viên vì chưa đủ thời gian .",
+          "sentiment": 2,
+          "topic": 0
+        },
+        {
+          "split": "train",
+          "id": "train_11417",
+          "original_index": 11417,
+          "text": "thầy dạy hay , tuy nhiên còn nhiều chỗ chưa thật sự giải đáp hoàn toàn cho sinh viên vì chưa đủ thời gian .",
+          "sentiment": 0,
+          "topic": 0
+        }
+      ],
+      "reason": "Annotation conflict: cùng câu, nhãn sentiment mâu thuẫn (positive vs negative)",
+      "samples_after": {
+        "train": 11424,
+        "dev": 1583,
+        "test": 3166
+      }
+    },
+    {
+      "step": 4,
+      "name": "unicode_normalization",
+      "description": "NFC normalization cho tất cả câu"
+    },
+    {
+      "step": 5,
+      "name": "emoji_acronym_replacement",
+      "description": "Chuyển acronym về Emoji Unicode — Q2=A đã duyệt",
+      "affected_samples": {
+        "train": 200,
+        "dev": 20,
+        "test": 72
+      }
+    },
+    {
+      "step": 6,
+      "name": "whitespace_normalization",
+      "description": "Chuẩn hóa khoảng trắng: strip + collapse multiple spaces"
+    },
+    {
+      "step": 7,
+      "name": "punctuation_spacing",
+      "description": "Giữ nguyên format pre-tokenized — Q3=A đã duyệt. Không thay đổi."
+    },
+    {
+      "step": 8,
+      "name": "generate_lowercase",
+      "description": "Tạo cột text_lower = text_clean.lower() — Q4=C đã duyệt"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "sentiment_weights": {
+    "0": 0.7153,
+    "1": 8.3144,
+    "2": 0.6749
+  },
+  "topic_weights": {
+    "0": 0.3498,
+    "1": 1.2976,
+    "2": 5.7465,
+    "3": 5.0819
+  },
+  "method": "inverse_frequency",
+  "formula": "weight = total_samples / (num_classes * count_per_class)",
+  "train_total": 11424,
+  "note": "Chỉ tính trên train set. Áp dụng khi train model, KHÔNG sửa data."
+}

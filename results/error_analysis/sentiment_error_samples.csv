@@ -1,0 +1,31 @@
+id,text,true_label,predicted_label
+test_01031,nhanh nhẹn .,Positive,Negative
+test_00868,cô hơi hiền .,Positive,Negative
+test_01818,được nói cặp .,Positive,Negative
+test_02997,đáng để học hỏi !,Positive,Negative
+test_02904,đáng để học tập .,Positive,Negative
+test_01381,có giáo trình cho môn học .,Positive,Negative
+test_00133,đề cương thực hành chi tiết .,Positive,Negative
+test_00916,mong cô ở lâu với trường .,Positive,Negative
+test_01650,tổ chức tham quan doanh nghiệp .,Positive,Negative
+test_02369,nên cho thực hành nhiều hơn .,Positive,Negative
+test_00844,lý thuyết .,Neutral,Negative
+test_00938,cầu kỳ .,Neutral,Negative
+test_01330,không ạ .,Neutral,Negative
+test_02560,nội dung .,Neutral,Negative
+test_01152,một số lúc .,Neutral,Negative
+test_01287,giáo trình mới .,Neutral,Negative
+test_00235,thời gian học .,Neutral,Negative
+test_01209,tạm thời chưa có .,Neutral,Negative
+test_01382,thực hành trên lớp .,Neutral,Negative
+test_01612,giờ là 2014 rồi !,Neutral,Negative
+test_00178,tâm lý .,Neutral,Positive
+test_00600,tất cả .,Neutral,Positive
+test_02629,chi tiết .,Neutral,Positive
+test_00399,làm việc nhóm .,Neutral,Positive
+test_01085,sự tận tình .,Neutral,Positive
+test_01150,lên lớp đều .,Neutral,Positive
+test_02273,thầy dạy ổn .,Neutral,Positive
+test_00931,nói dễ nghe .,Neutral,Positive
+test_02984,hoạt động nhóm .,Neutral,Positive
+test_02603,nhiều ví dụ .,Neutral,Positive

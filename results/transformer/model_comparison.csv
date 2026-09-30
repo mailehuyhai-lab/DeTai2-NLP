@@ -1,0 +1,14 @@
+task,metric,SVM,PhoBERT,diff
+sentiment,accuracy,0.892,0.9198,0.0278
+sentiment,macro_f1,0.7304,0.8224,0.092
+sentiment,weighted_f1,0.8872,0.9226,0.0354
+sentiment,f1_Negative,0.9126,0.9381,0.0255
+sentiment,f1_Neutral,0.3584,0.5849,0.2265
+sentiment,f1_Positive,0.9203,0.9442,0.0239
+topic,accuracy,0.8588,0.8506,-0.0082
+topic,macro_f1,0.7531,0.7673,0.0142
+topic,weighted_f1,0.8602,0.8603,0.0001
+topic,f1_Lecturer,0.9204,0.9139,-0.0065
+topic,f1_Training_program,0.7167,0.7284,0.0117
+topic,f1_Facility,0.9184,0.9013,-0.0171
+topic,f1_Others,0.457,0.5256,0.0686

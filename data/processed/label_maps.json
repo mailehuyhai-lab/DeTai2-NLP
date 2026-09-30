@@ -1,0 +1,13 @@
+{
+  "sentiment": {
+    "0": "Negative",
+    "1": "Neutral",
+    "2": "Positive"
+  },
+  "topic": {
+    "0": "Lecturer",
+    "1": "Training_program",
+    "2": "Facility",
+    "3": "Others"
+  }
+}

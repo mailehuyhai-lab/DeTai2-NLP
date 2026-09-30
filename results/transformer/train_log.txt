@@ -1,0 +1,31 @@
+
+============================================================
+START sentiment — 2026-09-30 03:44:53
+CMD: C:\Users\Hawir\AppData\Local\Programs\Python\Python312\python.exe -u D:\DeTai2_NLP\src\transformer\train_task.py --task sentiment --max-length 32
+============================================================
+
+============================================================
+Task: sentiment  |  Device: cpu  |  Seed: 42
+Model: vinai/phobert-base-v2  |  max_length: 32
+============================================================
+Train=11424  Dev=1583  Test=3166
+Class weights: {'Negative': 0.7153000235557556, 'Neutral': 8.314399719238281, 'Positive': 0.6748999953269958}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 13121.77it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: vinai/phobert-base-v2
+Key                        | Status     | 
+---------------------------+------------+-
+lm_head.layer_norm.weight  | UNEXPECTED | 
+lm_head.dense.bias         | UNEXPECTED | 
+lm_head.bias               | UNEXPECTED | 
+lm_head.layer_norm.bias    | UNEXPECTED | 
+lm_head.dense.weight       | UNEXPECTED | 
+classifier.dense.bias      | MISSING    | 
+classifier.dense.weight    | MISSING    | 
+classifier.out_proj.weight | MISSING    | 
+classifier.out_proj.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Total steps: 358  (batches/epoch: 179)

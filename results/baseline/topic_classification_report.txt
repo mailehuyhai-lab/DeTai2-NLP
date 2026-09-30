@@ -1,0 +1,54 @@
+======================================================================
+TOPIC CLASSIFICATION REPORTS
+======================================================================
+
+--- Logistic Regression (DEV) ---
+                  precision    recall  f1-score   support
+
+        Lecturer       0.97      0.84      0.90      1151
+Training_program       0.61      0.86      0.71       267
+        Facility       0.84      0.91      0.88        70
+          Others       0.38      0.55      0.45        95
+
+        accuracy                           0.83      1583
+       macro avg       0.70      0.79      0.73      1583
+    weighted avg       0.87      0.83      0.84      1583
+
+
+--- Logistic Regression (TEST) ---
+                  precision    recall  f1-score   support
+
+        Lecturer       0.96      0.81      0.88      2290
+Training_program       0.59      0.80      0.68       572
+        Facility       0.90      0.92      0.91       145
+          Others       0.31      0.59      0.41       159
+
+        accuracy                           0.80      3166
+       macro avg       0.69      0.78      0.72      3166
+    weighted avg       0.86      0.80      0.82      3166
+
+
+--- Linear SVM (DEV) ---
+                  precision    recall  f1-score   support
+
+        Lecturer       0.94      0.91      0.92      1151
+Training_program       0.69      0.82      0.75       267
+        Facility       0.89      0.93      0.91        70
+          Others       0.51      0.43      0.47        95
+
+        accuracy                           0.87      1583
+       macro avg       0.76      0.77      0.76      1583
+    weighted avg       0.87      0.87      0.87      1583
+
+
+--- Linear SVM (TEST) ---
+                  precision    recall  f1-score   support
+
+        Lecturer       0.93      0.91      0.92      2290
+Training_program       0.67      0.77      0.72       572
+        Facility       0.91      0.93      0.92       145
+          Others       0.48      0.43      0.46       159
+
+        accuracy                           0.86      3166
+       macro avg       0.75      0.76      0.75      3166
+    weighted avg       0.86      0.86      0.86      3166

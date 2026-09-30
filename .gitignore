@@ -1,0 +1,81 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Python tooling / cache
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# =========================
+# Logs / temporary files
+# =========================
+*.log
+*.tmp
+*.temp
+
+# =========================
+# Local databases
+# =========================
+*.sqlite
+*.db
+
+# =========================
+# Large model / checkpoint files
+# =========================
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+
+# =========================
+# Hugging Face cache
+# =========================
+huggingface_cache/
+
+# =========================
+# Project-specific
+# =========================
+models/
+reference/
+data/raw/
+*.zip

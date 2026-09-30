@@ -1,0 +1,71 @@
+{
+  "total_samples": {
+    "train": 11424,
+    "dev": 1583,
+    "test": 3166,
+    "total": 16173
+  },
+  "sentiment_distribution": {
+    "train": {
+      "0": 5324,
+      "1": 458,
+      "2": 5642
+    },
+    "dev": {
+      "0": 705,
+      "1": 73,
+      "2": 805
+    },
+    "test": {
+      "0": 1409,
+      "1": 167,
+      "2": 1590
+    }
+  },
+  "topic_distribution": {
+    "train": {
+      "0": 8164,
+      "1": 2201,
+      "2": 497,
+      "3": 562
+    },
+    "dev": {
+      "0": 1151,
+      "1": 267,
+      "2": 70,
+      "3": 95
+    },
+    "test": {
+      "0": 2290,
+      "1": 572,
+      "2": 145,
+      "3": 159
+    }
+  },
+  "text_length_stats": {
+    "train": {
+      "min": 4,
+      "max": 660,
+      "mean": 58.9,
+      "median": 47.0
+    },
+    "dev": {
+      "min": 4,
+      "max": 718,
+      "mean": 56.3,
+      "median": 45.0
+    },
+    "test": {
+      "min": 4,
+      "max": 411,
+      "mean": 58.6,
+      "median": 46.0
+    }
+  },
+  "removed_conflicts": 2,
+  "emoji_acronyms_affected": {
+    "train": 200,
+    "dev": 20,
+    "test": 72
+  }
+}

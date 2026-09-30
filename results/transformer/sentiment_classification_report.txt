@@ -1,0 +1,22 @@
+=== DEV (best epoch 2) ===
+              precision    recall  f1-score   support
+
+    Negative     0.9557    0.9475    0.9516       705
+     Neutral     0.5392    0.7534    0.6286        73
+    Positive     0.9706    0.9429    0.9565       805
+
+    accuracy                         0.9362      1583
+   macro avg     0.8218    0.8813    0.8456      1583
+weighted avg     0.9440    0.9362    0.9392      1583
+
+
+=== TEST ===
+              precision    recall  f1-score   support
+
+    Negative     0.9345    0.9418    0.9381      1409
+     Neutral     0.5185    0.6707    0.5849       167
+    Positive     0.9627    0.9264    0.9442      1590
+
+    accuracy                         0.9198      3166
+   macro avg     0.8053    0.8463    0.8224      3166
+weighted avg     0.9267    0.9198    0.9226      3166

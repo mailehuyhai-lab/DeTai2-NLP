@@ -1,0 +1,54 @@
+{
+  "sentiment": {
+    "train": {
+      "majority_class": "Positive",
+      "majority_count": 5642,
+      "minority_class": "Neutral",
+      "minority_count": 458,
+      "ratio_majority_to_minority": 12.319,
+      "n_classes": 3
+    },
+    "dev": {
+      "majority_class": "Positive",
+      "majority_count": 805,
+      "minority_class": "Neutral",
+      "minority_count": 73,
+      "ratio_majority_to_minority": 11.027,
+      "n_classes": 3
+    },
+    "test": {
+      "majority_class": "Positive",
+      "majority_count": 1590,
+      "minority_class": "Neutral",
+      "minority_count": 167,
+      "ratio_majority_to_minority": 9.521,
+      "n_classes": 3
+    }
+  },
+  "topic": {
+    "train": {
+      "majority_class": "Lecturer",
+      "majority_count": 8164,
+      "minority_class": "Facility",
+      "minority_count": 497,
+      "ratio_majority_to_minority": 16.427,
+      "n_classes": 4
+    },
+    "dev": {
+      "majority_class": "Lecturer",
+      "majority_count": 1151,
+      "minority_class": "Facility",
+      "minority_count": 70,
+      "ratio_majority_to_minority": 16.443,
+      "n_classes": 4
+    },
+    "test": {
+      "majority_class": "Lecturer",
+      "majority_count": 2290,
+      "minority_class": "Facility",
+      "minority_count": 145,
+      "ratio_majority_to_minority": 15.793,
+      "n_classes": 4
+    }
+  }
+}

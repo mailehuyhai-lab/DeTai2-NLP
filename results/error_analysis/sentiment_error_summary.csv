@@ -1,0 +1,7 @@
+true_label_name,predicted_label_name,count,pct_of_errors,pct_of_true_class
+Positive,Negative,114,33.33,7.17
+Neutral,Negative,63,18.42,37.72
+Neutral,Positive,54,15.79,32.34
+Negative,Positive,49,14.33,3.48
+Positive,Neutral,33,9.65,2.08
+Negative,Neutral,29,8.48,2.06
