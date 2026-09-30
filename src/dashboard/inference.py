@@ -108,3 +108,31 @@ def predict_feedback(raw_text: str) -> dict:
         "sentiment": {k: sent[k] for k in ("id", "label", "confidence", "probs")},
         "topic": {k: topic[k] for k in ("id", "label", "confidence", "probs")},
     }
+
+
+def predict_feedback_batch(raw_texts: list[object]) -> list[dict]:
+    """Predict a sequence by delegating every row to ``predict_feedback``.
+
+    Input validation errors are retained as row-level records so one blank CSV
+    cell does not discard the rest of the batch. Model/tokenizer errors are not
+    swallowed: a partial batch must not be presented as a reliable result.
+    """
+    records = []
+    for row_number, raw_text in enumerate(raw_texts):
+        try:
+            result = predict_feedback(raw_text)
+        except ValueError as exc:
+            records.append({
+                "row_number": row_number,
+                "status": "invalid_input",
+                "error": str(exc),
+                "result": None,
+            })
+        else:
+            records.append({
+                "row_number": row_number,
+                "status": "success",
+                "error": "",
+                "result": result,
+            })
+    return records

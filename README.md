@@ -259,6 +259,26 @@ python src/transformer/validate.py
 python -m streamlit run src/dashboard/app.py
 ```
 
+#### Dashboard MỨC 1: Single, Batch, Model Info và Error/Low Confidence
+
+Khởi động dashboard từ thư mục gốc:
+
+```bash
+python -m streamlit run src/dashboard/app.py
+```
+
+Các chức năng dự đoán trong dashboard dùng chung `clean_text()` và hai checkpoint PhoBERT local, không huấn luyện lại model:
+
+- **Single Analysis / Demo dự đoán**: nhập một phản hồi, nhận `Sentiment`, `Topic`, confidence softmax, xác suất từng lớp, `text_clean` và cảnh báo truncation khi văn bản vượt `max_length=32`.
+- **Batch Analysis**: tải file CSV, chọn cột phản hồi khi cần, chạy cùng pipeline với Single Analysis. Dashboard giữ nguyên mọi cột gốc và bổ sung tối thiểu `predicted_sentiment`, `sentiment_confidence`, `predicted_topic`, `topic_confidence`; dòng rỗng/NaN được ghi nhận theo dòng thay vì làm mất toàn bộ batch.
+- **Download CSV**: tải `batch_prediction_results.csv` ở định dạng UTF-8-SIG để giữ tiếng Việt khi mở lại bằng pandas hoặc Excel. File upload và kết quả chỉ được xử lý trong bộ nhớ dashboard.
+- **Model Info**: đọc model name, task, classes, hyperparameters và các metric test trực tiếp từ `results/transformer/*_metrics.json`; không đặt số mặc định khi artifact thiếu trường.
+- **Error / Low Confidence**: lọc lỗi test theo cột `correct` và lọc confidence thấp trên kết quả Batch hiện tại với các ngưỡng tùy chọn. Confidence Batch là softmax trực tiếp từ model và chưa calibration.
+
+Hai file `results/transformer/*_test_predictions.csv` hiện chỉ có `id`, `text`, nhãn thật/dự đoán, `correct` và tên nhãn; không có logits hay xác suất. Vì vậy dashboard **không bịa hoặc suy diễn confidence cho test artifact**: phần test chỉ hỗ trợ lọc lỗi, còn low-confidence chỉ áp dụng cho kết quả Batch có softmax thật. Cần đặt checkpoint tại `models/transformer/sentiment/` và `models/transformer/topic/`; các checkpoint này bị Git ignore và không được dashboard tự tải.
+
+Các trang phân tích cũ vẫn giữ nguyên: Tổng quan, Phân bố nhãn, Sentiment × Topic, Từ khóa & Emoji, Độ dài văn bản, So sánh mô hình, Phân tích lỗi và Thời gian. Phạm vi này là **MỨC 1 only**: Ontology, OWL/TTL, Protégé, RDF, SPARQL, SWRL, rule engine, hybrid fusion, GraphRAG, LLM explanation, database và REST API riêng chưa được triển khai.
+
 #### Prediction Demo và checkpoint local
 
 - Các trang **dashboard analytical** đọc `data/processed/` và các artifacts trong `results/` đã được commit vào repository.

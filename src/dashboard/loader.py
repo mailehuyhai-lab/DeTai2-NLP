@@ -112,11 +112,44 @@ def tf_cm_path(task: str) -> Path:
 
 
 @st.cache_data(show_spinner=False)
-def load_model_comparison() -> pd.DataFrame:
-    return load_csv(TRANSFORMER_DIR / "model_comparison.csv")
+def load_tf_predictions(task: str) -> pd.DataFrame:
+    """Load a Transformer test-prediction artifact and validate its contract."""
+    if task not in {"sentiment", "topic"}:
+        raise ValueError(f"Task không hợp lệ: {task}")
+    frame = load_csv(tf_pred_path(task)).copy()
+    required = {
+        "id", "text", "true_label", "predicted_label", "correct",
+        "true_label_name", "predicted_label_name",
+    }
+    missing = sorted(required.difference(frame.columns))
+    if missing:
+        raise ValueError(
+            f"Artifact dự đoán {task} thiếu cột bắt buộc: {', '.join(missing)}"
+        )
+    return frame
 
 
-# --- EDA ------------------------------------------------------------------
+@st.cache_data(show_spinner=False)
+def load_tf_model_info(task: str) -> dict:
+    """Return the saved Transformer metrics without inventing defaults."""
+    if task not in {"sentiment", "topic"}:
+        raise ValueError(f"Task không hợp lệ: {task}")
+    metrics = load_tf_metrics(task)
+    required = {"model", "test_metrics"}
+    missing = sorted(required.difference(metrics))
+    if missing:
+        raise ValueError(
+            f"Metrics artifact {task} thiếu trường bắt buộc: {', '.join(missing)}"
+        )
+    return metrics
+
+
+def transformer_prediction_has_confidence(frame: pd.DataFrame) -> bool:
+    """Whether a saved prediction frame contains real confidence values."""
+    confidence_columns = {
+        "confidence", "prediction_confidence", "probability", "max_probability",
+    }
+    return bool(confidence_columns.intersection(frame.columns))
 
 @st.cache_data(show_spinner=False)
 def load_eda_table(name: str) -> pd.DataFrame:

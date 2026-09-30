@@ -15,7 +15,20 @@ if str(BASE_DIR) not in sys.path:
 
 import streamlit as st
 
-from src.dashboard.views import crosstab, errors, keywords, labels, length, models, overview, prediction, time_notice
+from src.dashboard.views import (
+    batch,
+    crosstab,
+    error_low_confidence,
+    errors,
+    keywords,
+    labels,
+    length,
+    model_info,
+    models,
+    overview,
+    prediction,
+    time_notice,
+)
 
 
 st.set_page_config(
@@ -41,6 +54,9 @@ with st.sidebar:
             "So sánh mô hình",
             "Phân tích lỗi",
             "Demo dự đoán",
+            "Batch Analysis",
+            "Model Info",
+            "Error / Low Confidence",
             "Thời gian",
         ],
     )
@@ -64,6 +80,12 @@ try:
         errors.render()
     elif page == "Demo dự đoán":
         prediction.render()
+    elif page == "Batch Analysis":
+        batch.render()
+    elif page == "Model Info":
+        model_info.render()
+    elif page == "Error / Low Confidence":
+        error_low_confidence.render()
     else:
         time_notice.render()
 except FileNotFoundError as exc:
