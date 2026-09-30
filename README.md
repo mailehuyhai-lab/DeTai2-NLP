@@ -23,6 +23,13 @@ Các mục tiêu đã triển khai:
 
 Dự án sử dụng bộ dữ liệu **UIT-VSFC**.
 
+### Nguồn dữ liệu
+
+Dataset: **UIT-VSFC** (Vietnamese Students' Feedback Corpus)
+
+Nguồn dữ liệu công khai:
+https://github.com/kietnv/uit-vsfc
+
 Quy mô sau tiền xử lý:
 
 - Tổng số mẫu: **16.173**
